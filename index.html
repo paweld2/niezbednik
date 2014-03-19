@@ -22,15 +22,17 @@
     <![endif]-->
 </head>
 
-<body class="container" ng-controller="AuthorizationCtrl">
-<div ni-menu></div>
-<div ui-view></div>
-
+<body ng-class="$state.current.name">
+<div class="mainWrapper">
+    <div class="container" ng-controller="AuthorizationCtrl">
+        <div ui-view autoscroll="false"></div>
+    </div>
+</div>
 <script>
     var require = {
         config: {
             'appConfig': {
-                'version': '0.0.21',
+                'version': '0.0.22',
 		'serverBase': 'http://backend.niezbednik.paweld2.eu'
             }
         }
